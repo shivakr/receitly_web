@@ -1,0 +1,91 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+body {
+  font-family: $text-font-regular;
+  background: var(--body-bg );
+}
+
+ 
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input, button, input:focus, button:focus{
+  outline: none;
+}
+*, body {
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
+}
+input, button, input:focus, button:focus{
+  outline: none;
+}
+
+// Text Align
+.text-center{
+  text-align: center;
+}
+
+// Layout
+.container {
+  padding: 0 4vw;
+  margin: 0 auto;
+  width: 100%;
+
+  @include tab-sm() {
+    padding: 0 5vw;
+  }
+
+  @include tab-md() {
+    padding: 0 6vw;
+  }
+
+  @include desktop-sm() {
+    max-width: 80vw;
+    padding: 0;
+  }
+
+  @include desktop-md() {
+   padding: 0;
+  }
+
+  @include desktop-lg() {
+    max-width: 60vw;
+  }
+
+  @include desktop-xlg() {
+    max-width: 60vw;
+  }
+
+  @include desktop-xxlg() {
+    max-width: 70vw;
+  }
+}
+
+.desktop{
+  display: none !important;
+}
+@include desktop-sm() {
+  .mobile{
+      display: none !important; 
+  }
+  .desktop{
+      display: block !important; 
+  }
+}

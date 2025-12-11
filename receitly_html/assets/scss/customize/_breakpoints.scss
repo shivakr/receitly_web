@@ -1,0 +1,90 @@
+// Fluid Responsive Breakpoints in rem
+@mixin mobile-sm() {
+    @media (min-width: 0rem) { // 0px = 0rem
+        @content;
+    }
+}
+
+@mixin tab-sm() {
+    @media (min-width: 48rem) { // 768px = 48rem
+        @content;
+    }
+}
+
+@mixin tab-sm-max() {
+    @media (max-width: 47.99875rem) { // 767.98px = 47.99875rem
+        @content;
+    }
+}
+
+@mixin tab-md() {
+    @media (min-width: 52.125rem) { // 834px = 52.125rem
+        @content;
+    }
+}
+
+@mixin tab-md-max() {
+    @media (max-width: 52.124375rem) { // 833.98px = 52.124375rem
+        @content;
+    }
+}
+
+@mixin desktop-sm() {
+    @media (min-width: 62rem) { // 992px = 62rem
+        @content;
+    }
+}
+
+@mixin desktop-sm-max() {
+    @media (max-width: 61.99875rem) { // 991.98px = 61.99875rem
+        @content;
+    }
+}
+
+@mixin desktop-md() {
+    @media (min-width: 67.5rem) { // 1080px = 67.5rem
+        @content;
+    }
+}
+
+@mixin desktop-md-max() {
+    @media (max-width: 67.49875rem) { // 1079.98px = 67.49875rem
+        @content;
+    }
+}
+
+@mixin desktop-lg() {
+    @media (min-width: 87.5rem) { // 1400px = 87.5rem
+        @content;
+    }
+}
+
+@mixin desktop-lg-max() {
+    @media (max-width: 87.49875rem) { // 1399.98px = 87.49875rem
+        @content;
+    }
+}
+
+@mixin desktop-xlg() {
+    @media (min-width: 100rem) { // 1600px = 100rem
+        @content;
+    }
+}
+
+@mixin desktop-xlg-max() {
+    @media (max-width: 99.99875rem) { // 1599.98px = 99.99875rem
+        @content;
+    }
+}
+
+@mixin desktop-xxlg() {
+    @media (min-width: 125rem) { // 2000px = 125rem
+        @content;
+    }
+}
+
+@mixin desktop-xxlg-max() {
+    @media (max-width: 124.99875rem) { // 1999.98px = 124.99875rem
+        @content;
+    }
+}

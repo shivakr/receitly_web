@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0" />
+  <title>Receitly | Support</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="form_body">
+
+  <header class="form_header">
+    <a href="index.html" class="btn-back">
+      <img src="./assets/img/icons/icon-back.svg" alt="Back" />
+    </a>
+    <a href="index.html" class="form_logo">
+      <img src="./assets/img/receitly.svg" alt="Receitly" />
+    </a>
+  </header>
+      <div id="success-popup" class="success-popup">
+        <div class="success-content">
+          <div class="success-icon"> <img src="./assets/img/icons/icon-success.svg" alt="Success" /></div>
+          <h3>Thanks for reaching out!</h3>
+          <p>Your message was sent successfully. We're looking forward to connecting with you.</p>
+          <a href="index.html" class="back-btn">Back to Home</a>
+        </div>
+      </div>
+  <section class="contact-section">
+    <div class="form-container">
+
+      <form action="#" class="contact-form" novalidate>
+        <h2>Get in touch</h2>
+        <p>We’re here to help! Whether something isn’t working, you have a question, or you’ve got an idea to share.</p>
+
+        <div class="form-group">
+          <label for="help">How can we help you today? <span>*</span></label>
+          <select id="help" name="help" required>
+            <option value="">Choose what you need help with…</option>
+            <option value="question">I have a question</option>
+            <option value="issue">Something isn't working</option>
+            <option value="idea">I have an idea to share</option>
+          </select>
+        </div>
+
+        <div id="help-description" class="help-description"></div>
+
+        <!-- Common fields -->
+        <div id="common-fields">
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="first-name">First Name <span>*</span></label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group half">
+              <label for="last-name">Last Name <span>*</span></label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span>*</span></label>
+            <input type="email" id="email" name="email" required>
+            <small>We'll use this to respond to your request</small>
+          </div>
+        </div>
+
+        <!-- Question Fields -->
+        <div id="question-fields" class="conditional">
+          <div class="form-group">
+            <label for="about">What's this about? <span>*</span></label>
+            <input type="text" id="about" name="about" placeholder="" required>
+            <small>Just a quick summary</small>
+          </div>
+          <div class="form-group">
+            <label for="reply-method">How would you like us to get back to you?</label>
+            <select id="reply-method" name="reply-method">
+              <option>Email</option>
+              <option>Phone Call</option>
+              <input type="text" id="phone-number" name="phone-number" required placeholder="Phone Number" class="phone-number">
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="details">Tell us more <span>*</span></label>
+            <textarea id="details" name="details" rows="4" required placeholder="What can we help you with"></textarea>
+          </div>
+        </div>
+
+        <!-- Issue Fields -->
+        <div id="issue-fields" class="conditional">
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="device">What are you using? <span>*</span></label>
+              <select id="device" name="device" required>
+                <option value="">Pick your device…</option>
+                <option value="ios">iOS</option>
+                <option value="android">Android</option>
+                <option value="web">Web</option>
+              </select>
+            </div>
+            <div class="form-group half">
+              <label for="app-version">App Version (if known)</label>
+              <input type="text" id="app-version" name="app-version" placeholder="Like 1.2.3">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="issue-summary">What’s wrong? <span>*</span></label>
+            <input type="text" id="issue-summary" name="issue-summary" required>
+          </div>
+          <div class="form-group">
+            <label>How bad is it? <span>*</span></label>
+            <div class="radio-pills">
+              <input type="radio" id="sev-minor" name="severity" value="minor" required>
+              <label for="sev-minor" class="pill">Minor annoyance</label>
+              <input type="radio" id="sev-pretty" name="severity" value="pretty">
+              <label for="sev-pretty" class="pill">Pretty annoying</label>
+              <input type="radio" id="sev-really" name="severity" value="really">
+              <label for="sev-really" class="pill">Really frustrating</label>
+              <input type="radio" id="sev-cannot" name="severity" value="cannot">
+              <label for="sev-cannot" class="pill">Can’t use the app</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="steps">How can we make this happen too? <span>*</span></label>
+            <textarea id="steps" name="steps" rows="4" required
+              placeholder=". I opened the app&#10;. Then I tapped on…&#10;. Next I tried to…&#10;. That’s when I noticed"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="screenshot">Got a screenshot? (Optional)</label>
+            <div class="upload-area">
+              <span class="upload-label">
+                <img src="./assets/img/icons/icon-camera.svg" alt="" class="upload-icon">
+                Click to add a photo
+              </span>
+              <input type="file" id="screenshot" name="screenshot" accept="image/*" />
+            </div>
+            <small>A picture is worth a thousand words!</small>
+          </div>
+        </div>
+
+        <!-- Idea Fields -->
+        <div id="idea-fields" class="conditional">
+          <div class="form-group">
+            <label for="idea-title">What’s your idea? <span>*</span></label>
+            <input type="text" id="idea-title" name="idea-title" required>
+          </div>
+          <div class="form-group">
+            <label>How much would this help you?</label>
+            <div class="radio-pills">
+              <input type="radio" id="help-nice" name="importance" value="nice" required>
+              <label for="help-nice" class="pill">Would be nice</label>
+              <input type="radio" id="help-want" name="importance" value="want">
+              <label for="help-want" class="pill">Really want this</label>
+              <input type="radio" id="help-badly" name="importance" value="badly">
+              <label for="help-badly" class="pill">Need this badly!</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="idea-details">Tell us all about it! <span>*</span></label>
+            <textarea id="idea-details" name="idea-details" rows="4" required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Send My Message</button>
+      </form>
+    </div>
+  </section>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/animation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const helpSelect = document.getElementById('help');
+      const helpDescription = document.getElementById('help-description');
+      const types = ['question', 'issue', 'idea'];
+
+      const descriptions = {
+        question: `<strong>I have a question</strong><br>Need help with your account? Want to know how something works? We're here to help!`,
+        issue: `<strong>Something isn't working</strong><br>Is something broken or not working the way you expected? Let us know and we'll fix it!`,
+        idea: `<strong>I have an idea to share</strong><br>Got a cool feature idea? Want to suggest something to improve? We'd love to hear it!`
+      };
+
+      function toggleFields() {
+        types.forEach(type => {
+          const block = document.getElementById(type + '-fields');
+          if (block) block.style.display = (helpSelect.value === type) ? 'block' : 'none';
+        });
+
+        if (descriptions[helpSelect.value]) {
+          helpDescription.style.display = 'block';
+          helpDescription.innerHTML = descriptions[helpSelect.value];
+        } else {
+          helpDescription.style.display = 'none';
+        }
+      }
+
+      helpSelect.addEventListener('change', toggleFields);
+      toggleFields();
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const helpSelect = document.getElementById('help');
+      const helpDescription = document.getElementById('help-description');
+      const types = ['question', 'issue', 'idea'];
+      const form = document.querySelector('.contact-form');
+      const successPopup = document.getElementById('success-popup');
+
+      const descriptions = {
+        question: `<strong>I have a question</strong><br>Need help with your account? Want to know how something works? We're here to help!`,
+        issue: `<strong>Something isn't working</strong><br>Is something broken or not working the way you expected? Let us know and we'll fix it!`,
+        idea: `<strong>I have an idea to share</strong><br>Got a cool feature idea? Want to suggest something to improve? We'd love to hear it!`
+      };
+
+      function toggleFields() {
+        types.forEach(type => {
+          const block = document.getElementById(type + '-fields');
+          if (block) block.style.display = (helpSelect.value === type) ? 'block' : 'none';
+        });
+
+        if (descriptions[helpSelect.value]) {
+          helpDescription.style.display = 'block';
+          helpDescription.innerHTML = descriptions[helpSelect.value];
+        } else {
+          helpDescription.style.display = 'none';
+        }
+      }
+
+      helpSelect.addEventListener('change', toggleFields);
+      toggleFields();
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        successPopup.classList.add('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
